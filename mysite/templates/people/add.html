@@ -10,14 +10,15 @@
         {% endif %}
         <form action="{% url 'people:add' %}" method="post" style="width: 500px">
         {% csrf_token %}
+            {{form.name.errors}}
             <div class="input-group">
-                {{form.name.errors}}
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                 <input type="text" class="form-control custom-input" name="name" placeholder="Full Name">
             </div>
             <br>
+
+            {{form.email.errors}}
             <div class="input-group">
-                {{form.email.errors}}
                 <span class="input-group-addon"><i class="glyphicon glyphicon-email"></i></span>
                 <input type="email" class="form-control custom-input" name="email" placeholder="Enter Email">
             </div>
