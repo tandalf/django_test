@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block page_title %}Welcome{% endblock page_title%}
+
+{% block page %}
+    <div><h2>{{welcome_message}}</h2></div>
+    <div>
+        <p>add people <a href="{% url 'people:add' %}">here</a></p>
+        <p>view people <a href="{% url 'people:list' %}">here</a></p>
+    </div>
+{% endblock page %}
